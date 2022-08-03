@@ -1,11 +1,10 @@
 class Book
-  def title=(s)
-    @title = s
-  end
-
-  def title
-    @title
+  def initialize(title:, author:, pub_year:)
+    @title = title
+    @author = author
+    @pub_year= pub_year
   end
 end
 
-b = Book.new
+b = Book.new(pub_year: 2020, title: "code", author: "Ruby Red")
+p b
