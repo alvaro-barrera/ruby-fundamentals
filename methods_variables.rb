@@ -1,4 +1,5 @@
 class Book
+  include Tagged
   attr_reader :title, :author, :pub_year
   attr_accessor :small_cover, :large_cover
 
@@ -37,3 +38,5 @@ end
 b = Book.new(pub_year: 2020, title: "code", author: "Ruby Red")
 b.cover_url = "https:/example.com/cover"
 p b
+
+Book.find_by_tags([b1,b2], ["testing", "ruby"])
