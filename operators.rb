@@ -19,6 +19,8 @@ class Collection
 end
 
 class Collection
+
+  # Custom operators
   def <<(book)
     @books << book
   end
